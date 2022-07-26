@@ -15,7 +15,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "https://messenger-instant-chat.herokuapp.com/";
+const ENDPOINT = "https://messenger-instant-chat.herokuapp.com/"; 
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -168,12 +168,12 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             px={2}
             w="100%"
             fontFamily="Work sans"
-            display="flex"
+            d="flex"
             justifyContent={{ base: "space-between" }}
             alignItems="center"
           >
             <IconButton
-              display={{ base: "flex", md: "none" }}
+              d={{ base: "flex", md: "none" }}
               icon={<ArrowBackIcon />}
               onClick={() => setSelectedChat("")}
             />
@@ -197,7 +197,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               ))}
           </Text>
           <Box
-            display="flex"
+            d="flex"
             flexDir="column"
             justifyContent="flex-end"
             p={3}
@@ -231,6 +231,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 <div>
                   <Lottie
                     options={defaultOptions}
+                    // height={50}
                     width={70}
                     style={{ marginBottom: 15, marginLeft: 0 }}
                   />
@@ -250,7 +251,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         </>
       ) : (
         // to get socket.io on same page
-        <Box display="flex" alignItems="center" justifyContent="center" h="100%">
+        <Box d="flex" alignItems="center" justifyContent="center" h="100%">
           <Text fontSize="3xl" pb={3} fontFamily="Work sans">
             Click on a user to start chatting
           </Text>
