@@ -25,7 +25,7 @@ function Homepage() {
   return (
     <Container maxW="xl" centerContent>
       <Box
-        display="flex"
+        d="flex"
         justifyContent="center"
         p={3}
         bg="white"
